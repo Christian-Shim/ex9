@@ -6,14 +6,6 @@ terraform {
       version = "~> 6.0"
     }
   }
-
-  backend "s3" {
-    bucket         = "std12-ex8-tot-s3"
-    key            = "ex8-tot/terraform.tfstate"
-    region         = "eu-west-1"
-    dynamodb_table = "std12-ex8-tot-tf-lock"
-    encrypt        = true
-  }
 }
 
 provider "aws" {
